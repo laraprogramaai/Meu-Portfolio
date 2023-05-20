@@ -15,13 +15,17 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 33px 9%;
+    justify-content: center;
+    padding: 20px 100px;
     background: transparent;
 }
 
 body{
     background-color: plum;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .logo{
@@ -32,19 +36,34 @@ body{
 
 .navlist{
     display: flex;
+    
 }
 .navlist a{
 color: white;
-margin-left: 60px;
-font-size: 15 px;
-font-weight: 600;
-border-bottom: 2px solid transparent;
+font-size: 20 px;
+font-weight: 500;
 transition: all .55s ease;
+text-decoration: none;
+position: relative;
+margin-left: 40px;
 }
 
-.navlist a:hover{
-    border-bottom: 2px solid white;
-
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s ;
+    transform-origin: right;
+}
+.navlist a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 #menu-icon{
@@ -53,4 +72,10 @@ transition: all .55s ease;
     z-index: 10001;
     cursor: pointer;
     display: none;
+}
+
+.titulo{
+   color: white; 
+   
+   
 }
