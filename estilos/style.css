@@ -15,7 +15,7 @@ header{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px 100px;
     background: transparent;
 }
@@ -26,6 +26,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .logo{
@@ -77,5 +79,24 @@ margin-left: 40px;
 .titulo{
    color: white; 
    
-   
 }
+
+.titulo{
+    position: relative;
+    width: 1200px;
+    height: 440px;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255,255,255, .5);
+    backdrop-filter: blur (20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.titulo .titulo-text{
+    text-align: left;
+
+}
+
