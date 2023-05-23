@@ -30,11 +30,6 @@ body{
     background-position: center;
 }
 
-.logo{
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-}
 
 .navlist{
     display: flex;
@@ -42,7 +37,7 @@ body{
 }
 .navlist a{
 color: white;
-font-size: 20 px;
+font-size: 40 px;
 font-weight: 500;
 transition: all .55s ease;
 text-decoration: none;
@@ -68,20 +63,10 @@ margin-left: 40px;
     transform-origin: left;
 }
 
-#menu-icon{
-    color: white;
-    font-size: 30px;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-
-.titulo{
-   color: white; 
    
-}
 
 .titulo{
+    color: white;
     position: relative;
     width: 1200px;
     height: 440px;
@@ -99,4 +84,6 @@ margin-left: 40px;
     text-align: left;
 
 }
+
+
 
