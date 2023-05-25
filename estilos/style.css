@@ -1,5 +1,5 @@
-*{
-    padding: auto;
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-header{
+header {
     position: fixed;
     right: 0;
     top: 0;
@@ -16,11 +16,17 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 20px;
     background: transparent;
+    padding: 20px;
 }
 
-body{
+.titulo-header {
+    margin: 0;
+    font-size: large;
+}
+
+body {
     background-color: plum;
     display: flex;
     justify-content: center;
@@ -30,22 +36,25 @@ body{
     background-position: center;
 }
 
-
-.navlist{
+.navlist {
     display: flex;
-    
-}
-.navlist a{
-color: white;
-font-size: 40 px;
-font-weight: 500;
-transition: all .55s ease;
-text-decoration: none;
-position: relative;
-margin-left: 40px;
+    margin-right: 66px;
+    justify-content: flex-end;
+    margin-left: auto;
 }
 
-.navlist a::after{
+.navlist a {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.55s ease;
+    text-decoration: none;
+    position: relative;
+    margin-left: 30px;
+    white-space: nowrap;
+}
+
+.navlist a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -55,34 +64,45 @@ margin-left: 40px;
     left: 0;
     bottom: -6px;
     transform: scaleX(0);
-    transition: transform .5s ;
+    transition: transform 0.5s;
     transform-origin: right;
 }
-.navlist a:hover::after{
+
+.navlist a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
-   
-
-.titulo{
+.titulo {
     color: white;
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
     height: 440px;
     background: transparent;
     border-radius: 20px;
-    border: 2px solid rgba(255,255,255, .5);
-    backdrop-filter: blur (20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.titulo .titulo-text{
+.titulo .titulo-text {
     text-align: left;
+}
 
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
