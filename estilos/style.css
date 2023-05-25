@@ -24,16 +24,7 @@ header {
 .titulo-header {
     margin: 0;
     font-size: large;
-}
-
-body {
-    background-color: plum;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    color: #fff;
 }
 
 .navlist {
@@ -45,13 +36,15 @@ body {
 
 .navlist a {
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     transition: all 0.55s ease;
     text-decoration: none;
     position: relative;
     margin-left: 30px;
     white-space: nowrap;
+    align-items: normal;
+    
 }
 
 .navlist a::after {
@@ -90,6 +83,30 @@ body {
 
 .titulo .titulo-text {
     text-align: left;
+}
+
+
+body {
+    background-color: rgb(104, 38, 154);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    font-size: 300%;
 }
 
 @media (max-width: 768px) {
