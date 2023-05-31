@@ -246,7 +246,7 @@ body{
 
 .carousel-item img {
     width: 100%;
-    height: 300px; /* Ajuste a altura conforme necessário */
+    height: 400px; /* Ajuste a altura conforme necessário */
     object-fit: cover; /* Para ajustar o dimensionamento das imagens */
   }  
 
@@ -288,42 +288,78 @@ body{
     width: 100%;
     height: auto;
   }
+ /* botão */
+  .custom-btn {
+    background-color: rgb(148, 17, 196);
+    color: white;
+  }
 
-  .projects .hover-wrapper {
-    position: relative;
-    overflow: hidden;
+  @keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
   
-  .projects .hover-content {
+  .pulsating-btn {
+    animation: pulsate 1.5s infinite;
+  }
+
+ /* titulo sobre a img */
+  .image-hover {
+    position: relative;
+    transition: filter 0.3s ease;
+  }
+
+  .image-hover:hover {
+    filter: brightness(0.2);
+  }
+
+  .image-hover::after {
+    content: attr(alt);
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .image-hover:hover::after {
+    opacity: 1;
+  }
+
+  .image-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: large;
+  }
+  
+  .carousel-item:hover .image-overlay {
+    opacity: 1;
+  }
+
+  .overlay-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
     text-align: center;
+    color: #fff;
   }
-  
-  .projects .hover-wrapper:hover .hover-content {
-    opacity: 1;
-  }
-  
-  .projects .hover-content a.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 2px solid  rgb(104, 38, 154);
-    background-color: transparent;
-    color: #181818;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .projects .hover-content a.btn:hover {
-    background-color: #ffffff;
-    color: #181818;
-  }
-
 
 /* Estilo da seção "Contato" */
 #contact {

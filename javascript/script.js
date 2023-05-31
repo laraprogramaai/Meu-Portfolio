@@ -77,3 +77,29 @@ var webDesignChart = new Chart(document.getElementById('web-design-chart'), {
       }
     }
   });
+
+
+  $(document).ready(function() {
+    // Web Design
+    var webDesignChart = new Chart(document.getElementById('web-design-chart'), {
+      // ... chart configuration code ...
+    });
+  
+    // HTML5
+    var html5Chart = new Chart(document.getElementById('html5-chart'), {
+      // ... chart configuration code ...
+    });
+  
+    // CSS3
+    var css3Chart = new Chart(document.getElementById('css3-chart'), {
+      // ... chart configuration code ...
+    });
+  
+    // JavaScript
+    var javascriptChart = new Chart(document.getElementById('javascript-chart'), {
+      // ... chart configuration code ...
+    });
+  
+    // Initialize Carousel
+    $('.carousel').carousel();
+  });

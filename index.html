@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,16 @@
     <link rel="icon" type="image/x-icon" href="/estilos/imagens/faviconlt.ico">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
@@ -191,63 +197,96 @@
 
 
 <!-- portfolio -->
-<section class="projects">
+
+ <!-- carrocel -->
+ <section class="projects">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="project-title">Portfólio<br><br><br></h2>
-        <div class="shuffle-wrapper">
-          <div class="shuffle-item">
-            <div class="position-relative rounded hover-wrapper">
-              <img src="estilos/portfolio/port-1.png" alt="portfolio-image" class="img-fluid rounded w-100">
-              <div class="hover-overlay">
-                <div class="hover-content">
-                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Projeto-Site/index.html">View project</a>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a target="_blank" href="estilos/portfolio/projetos/Projeto-Site/index.html">
+                <img src="estilos/portfolio/port-1.png" alt="portfolio-image" class="img-fluid rounded w-100 image-hover">
+              </a>
+              <div class="carousel-caption">
+
+                <div class="image-overlay">
+                  
+                  <h3>Site feito no curso em vídeo</h3>
+                  <p>Descrição do projeto</p>
                 </div>
+
+                <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/Projeto-Site/index.html">View project</a>
               </div>
-              <figcaption>"Site feito no o curso em video"</figcaption>
             </div>
-          </div>
-          <div class="shuffle-item">
-            <div class="position-relative rounded hover-wrapper">
-              <img src="estilos/portfolio/marioproj.png" alt="portfolio-image" class="img-fluid rounded w-100">
-              <div class="hover-overlay">
-                <div class="hover-content">
-                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Site-Mario-Bros/index.html">View project</a>
+            <div class="carousel-item">
+              <a target="_blank" href="estilos/portfolio/projetos/Site-Mario-Bros/index.html">
+                <img src="estilos/portfolio/marioproj.png" alt="portfolio-image" class="img-fluid rounded w-100 image-hover">
+              </a>
+              <div class="carousel-caption">
+
+                <div class="image-overlay">
+                  <h3>Site feito no curso em vídeo</h3>
+                  <p>Descrição do projeto</p>
                 </div>
                 
+                <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/Site-Mario-Bros/index.html">View project</a>
               </div>
-              <figcaption>"Site para o filme Super Mario Bros"</figcaption>
             </div>
-          </div>
-          <div class="shuffle-item">
-            <div class="position-relative rounded hover-wrapper">
-              <img src="estilos/portfolio/petshop-proj.png" alt="portfolio-image" class="img-fluid rounded w-100">
-              <div class="hover-overlay">
-                <div class="hover-content">
-                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/petshow/index.html">View project</a>
+            <div class="carousel-item">
+              <a target="_blank" href="estilos/portfolio/projetos/petshow/index.html">
+                <img src="estilos/portfolio/petshop-proj.png" alt="portfolio-image" class="img-fluid rounded w-100 image-hover">
+              </a>
+              <div class="carousel-caption">
+
+                <div class="image-overlay">
+                  <h3>Site Super Mario Bros.</h3>
+                  <p>Descrição do projeto</p>
                 </div>
+                
+                <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/petshow/index.html">View project</a>
               </div>
-              
-              <figcaption>"Modelo de site para PetShop"</figcaption>
             </div>
-          </div>
-          <div class="shuffle-item">
-            <div class="position-relative rounded hover-wrapper">
-              <img src="estilos/portfolio/viagemproj.png" alt="portfolio-image" class="img-fluid rounded w-100">
-              <div class="hover-overlay">
-                <div class="hover-content">
-                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Exercícios - Viagem/index.html">View project</a>
+            <div class="carousel-item">
+              <a target="_blank" href="estilos/portfolio/projetos/Exercícios - Viagem/index.html">
+                <img src="estilos/portfolio/viagemproj.png" alt="portfolio-image" class="img-fluid rounded w-100 image-hover">
+              </a>
+              <div class="carousel-caption">
+
+                <div class="image-overlay">
+                  <h3>Site feito no curso em vídeo</h3>
+                  <p>Descrição do projeto</p>
                 </div>
+                
+                <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/Exercícios - Viagem/index.html">View project</a>
               </div>
-              <figcaption>"Modelo de site para agência de viagens"</figcaption>
             </div>
           </div>
+
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
-    </div>
-    </section>
+  </div>
+</section>
+
+    <!-- carrocel -->
 <!-- /portfolio -->
 
 <section id="contact">
@@ -271,6 +310,8 @@
   </footer>
 
   <script src="main.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="javascript/script.js"></script>
   <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
