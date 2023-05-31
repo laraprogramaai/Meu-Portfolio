@@ -2,36 +2,48 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    text-decoration: none;
 }
 
+@media (max-width: 768px){}
+
+    .titulo-header{
+        font-size: 24px;
+    }
+
+
 header {
-    position: fixed;
-    right: 0;
-    top: 0;
     z-index: 1000;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     background: transparent;
-    padding: 20px;
+    align-items: center;
+    width: 100%;
 }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgb(104, 38, 154), rgb(208, 0, 255));
+      }
 
 .titulo-header {
     margin: 0;
     font-size: large;
-    color: #fff;
+    color: #ffffff;
 }
 
 .navlist {
     display: flex;
-    margin-right: 66px;
     justify-content: flex-end;
     margin-left: auto;
+    margin-top: 20px;
+    list-style:none;
 }
 
 .navlist a {
@@ -43,8 +55,6 @@ header {
     position: relative;
     margin-left: 30px;
     white-space: nowrap;
-    align-items: normal;
-    
 }
 
 .navlist a::after {
@@ -66,61 +76,282 @@ header {
     transform-origin: left;
 }
 
+.navlist li{
+    display: inline-block;
+        margin-right: auto;
+}
+
+.navlist a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+/* Seção titulo  */
 .titulo {
     color: white;
     position: relative;
-    max-width: 1200px;
+    max-width: auto;
     height: 440px;
     background: transparent;
-    border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(3, 3, 3, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.titulo .titulo-text {
+.titulo-text {
     text-align: left;
+    
+}
+  .titulo h4 {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .titulo h1 {
+    font-size: 40px;
+    color: #ffffff;
+  }
+  
+  .titulo h4:last-child {
+    margin-bottom: 0;
+  }
+  
+  .titulo img {
+    margin-top: 30px;
+    border-radius: 50%;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+/* Estilo da seção "Sobre Mim" */
+#about {
+   padding: 40px 0;
+   background-color: #ffffff;
+   text-align: center;
+   margin-bottom: 40px;
+   max-width: auto;
+   position: relative;
 }
 
 
-body {
-    background-color: rgb(104, 38, 154);
+#about h2 {
+    font-size: 40px;
+    color: #181818;
+    margin-bottom: 20px;
+    
+}
+
+#about p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-bottom: 40px;
+    padding: auto;
+    text-align: center;
+    color: #181818;
+
+}
+
+/*Estilo da seção "formação" */
+
+.section-title {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 40px;
+  }
+  
+  .icon {
+    font-size: 50px;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  .icon-bg {
+    background-color: #fff;
+    padding: 50px;
+
+  }
+  
+  .text-dark {
+    color: #ffffff;
+    font-size: large;
+  }
+  
+  .text-light {
+    color: #fff;
+    font-size: large;
+  }
+  
+  .mb-1 {
+    margin-bottom: 10px;
+  }
+  
+  .mb-80 {
+    margin-bottom: 80px;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .rounded-circle {
+    border-radius: 50%;
+  }
+  
+  .section {
+    padding: 80px 0;
+    color: #fff;
+  }
+
+  .bx-medal {
+    font-size: 40px;
+    color: #fff;
+  }
+
+
+/* Estilo da seção "Habilidades" */
+#skills {
+    padding: 40px 0;
+    background-color: #fff;
+    
+}
+
+#skills h4{
+    font-size: 28px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+#skills h2{
+    color: #181818;
+    font-size: 40px;
+}
+
+/* Estilos para o gráfico rosquinha */
+.progress-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+/* Estilo da seção "Projetos" */
+
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Para ajustar o dimensionamento das imagens */
+  }  
+
+.projects h2 {
+    color: #181818;
+    font-size: 40px;
+    align-items: center;
+    margin-top: auto;
+    padding: auto;
+
+}
+
+.projects .container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+  
+  .projects .shuffle-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    width: 100%;
+  }
+  
+  .projects .shuffle-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects .hover-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projects .hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    text-align: center;
+  }
+  
+  .projects .hover-wrapper:hover .hover-content {
+    opacity: 1;
+  }
+  
+  .projects .hover-content a.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid  rgb(104, 38, 154);
+    background-color: transparent;
+    color: #181818;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .projects .hover-content a.btn:hover {
+    background-color: #ffffff;
+    color: #181818;
+  }
+
+
+/* Estilo da seção "Contato" */
+#contact {
+    padding: 40px 0;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
     align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
 }
 
-h4 {
-    display: flex;
+#contact h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
     align-items: center;
-    margin-left: 30px;
 }
 
-h1 {
-    display: flex;
+#contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
     align-items: center;
-    margin-left: 30px;
-    font-size: 300%;
+    font-size: large;
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 20px 15px;
-    }
+.container {
+    max-width: auto;
+    align-items: center;
+    text-align: center;
 }
-
-@media (max-width: 480px) {
-    .navlist {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-

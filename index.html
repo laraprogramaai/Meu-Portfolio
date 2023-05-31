@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
+    <link rel="icon" type="image/x-icon" href="/estilos/imagens/faviconlt.ico">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
@@ -43,47 +47,234 @@
     </header>
 
     <section class="titulo">
-        <div class="container">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-11 mx-auto">
             <h4>Olá, Mundo!</h4>
             <h1>Eu sou Lara Magalhães Tagliani...</h1>
             <h4>Desenvolvedora Web Front-end</h4>
+          </div>
         </div>
+      </div>
+      <div class="container text-center">
+        <img src="estilos/imagens/minha-foto.jpg" class="rounded-circle img-fluid">
+      </div>
+      </div>
     </section>
 
     <section id="about">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Meu nome é Lara Magalhães Tagliani.</p>
+      <p class="font-secondary paragraph-lg text-dark"> Desenvolvedora Front-end com experiência em Visual Studio, WordPress, Figma e GitHub. Certificada em Web design e programação básica, com habilidades em HTML5, CSS3, JavaScript. Habilidades em design gráfico com Photoshop e Illustrator, modelagem 3D com Blender e desenho digital. Formada em Tecnologia em Jogos Digitais pela Uninove. Busco oportunidades para aplicar meus conhecimentos e me destacar na área de desenvolvimento web.</p>
+  </section>
 
-        <h2>Sobre Mim</h2>
-        <p>Olá! Meu nome é Lara Magalhães Tagliani.</p>
-        <p class="font-secondary paragraph-lg text-dark"> Desenvolvedora Front-end com experiência em Visual Studio, WordPress, Figma e GitHub. Certificada em Web design e programação básica, com habilidades em HTML5, CSS3, JavaScript. Habilidades em design gráfico com Photoshop e Illustrator, modelagem 3D com Blender e desenho digital. Formada em Tecnologia em Jogos Digitais pela Uninove. Busco oportunidades para aplicar meus conhecimentos e me destacar na área de desenvolvimento web.</p>
-      </section>
-
-      <section id="projects">
-        <h2>Projetos</h2>
-        <div class="project">
-          <h3>{nome do projeto 1}</h3>
-          <p>{descrição do projeto 1}</p>
-          <p>Tecnologias utilizadas: {tecnologias do projeto 1}</p>
+<!-- educação -->
+  <section class="section position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Formações</h2>
+          
         </div>
-        <div class="project">
-          <h3>{nome do projeto 2}</h3>
-          <p>{descrição do projeto 2}</p>
-          <p>Tecnologias utilizadas: {tecnologias do projeto 2}</p>
+        <div class="col-lg-6 col-md-6 mb-80">
+          <div class="d-flex">
+            <div class="mr-lg-5 mr-3">
+              <i class='bx bx-medal'></i>
+            </div>
+            <div>
+              <p class="text-dark mb-1">2022</p>
+              <h4>Tecnologia em Jogos Digitais</h4>
+              <p class="mb-0 text-light">Universidade Nove de Julho - Campus Memorial</p>
+            </div>
+          </div>
         </div>
-        <!-- Adicione mais projetos conforme necessário -->
-      </section>
-      <section id="contact">
-        <h2>Contato</h2>
-        <p>Email: {seu email}</p>
-        <p>Telefone: {seu telefone}</p>
-      </section>
+        <div class="col-lg-6 col-md-6 mb-80">
+          <div class="d-flex">
+            <div class="mr-lg-5 mr-3">
+              <i class='bx bx-medal'></i>
+            </div>
+            <div>
+              <p class="text-dark mb-1">2018</p>
+              <h4>Web Designer</h4>
+              <p class="mb-0 text-light">Senac Lapa Tito</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb-80">
+          <div class="d-flex">
+            <div class="mr-lg-5 mr-3">
+              <i class='bx bx-medal'></i>
+            </div>
+            <div>
+              <p class="text-dark mb-1">2023</p>
+              <h4>WordPress</h4>
+              <p class="mb-0 text-light">Curso em Video</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb-80">
+          <div class="d-flex">
+            <div class="mr-lg-5 mr-3">
+              <i class='bx bx-medal'></i>
+            </div>
+            <div>
+              <p class="text-dark mb-1">2018</p>
+              <h4>Master Tech</h4>
+              <p class="mb-0 text-light">Programação Módulo - Básico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- educação -->
+
+<!-- skills -->
+<section id="skills">
+  <div class="container">
+    <h2>Habilidades</h2>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <!-- Web Design -->
+          <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+            <div class="card shadow text-center">
+              <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
+                <canvas id="web-design-chart"></canvas>
+              </div>
+              <div class="card-footer bg-white">
+                <h4 class="card-title">Web Design (90%)</h4>
+              </div>
+            </div>
+          </div>
+          <!-- HTML5 -->
+          <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+            <div class="card shadow text-center">
+              <div class="position-relative rounded-top progress-wrapper" data-color="#9473e6">
+                <canvas id="html5-chart"></canvas>
+              </div>
+              <div class="card-footer bg-white">
+                <h4 class="card-title">HTML5 (80%)</h4>
+              </div>
+            </div>
+          </div>
+          <!-- CSS3 -->
+          <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+            <div class="card shadow text-center">
+              <div class="position-relative rounded-top progress-wrapper" data-color="#bdecf6">
+                <canvas id="css3-chart"></canvas>
+              </div>
+              <div class="card-footer bg-white">
+                <h4 class="card-title">CSS3 (85%)</h4>
+              </div>
+            </div>
+          </div>
+          <!-- JavaScript -->
+          <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+            <div class="card shadow text-center">
+              <div class="position-relative rounded-top progress-wrapper" data-color="#ffbcaa">
+                <canvas id="javascript-chart"></canvas>
+              </div>
+              <div class="card-footer bg-white">
+                <h4 class="card-title">JavaScript (50%)</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /skills -->
+    </div>
+</section>
 
 
-	<script src="main.js" type="module"></script>
+<!-- portfolio -->
+<section class="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="project-title">Portfólio<br><br><br></h2>
+        <div class="shuffle-wrapper">
+          <div class="shuffle-item">
+            <div class="position-relative rounded hover-wrapper">
+              <img src="estilos/portfolio/port-1.png" alt="portfolio-image" class="img-fluid rounded w-100">
+              <div class="hover-overlay">
+                <div class="hover-content">
+                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Projeto-Site/index.html">View project</a>
+                </div>
+              </div>
+              <figcaption>"Site feito no o curso em video"</figcaption>
+            </div>
+          </div>
+          <div class="shuffle-item">
+            <div class="position-relative rounded hover-wrapper">
+              <img src="estilos/portfolio/marioproj.png" alt="portfolio-image" class="img-fluid rounded w-100">
+              <div class="hover-overlay">
+                <div class="hover-content">
+                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Site-Mario-Bros/index.html">View project</a>
+                </div>
+                
+              </div>
+              <figcaption>"Site para o filme Super Mario Bros"</figcaption>
+            </div>
+          </div>
+          <div class="shuffle-item">
+            <div class="position-relative rounded hover-wrapper">
+              <img src="estilos/portfolio/petshop-proj.png" alt="portfolio-image" class="img-fluid rounded w-100">
+              <div class="hover-overlay">
+                <div class="hover-content">
+                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/petshow/index.html">View project</a>
+                </div>
+              </div>
+              
+              <figcaption>"Modelo de site para PetShop"</figcaption>
+            </div>
+          </div>
+          <div class="shuffle-item">
+            <div class="position-relative rounded hover-wrapper">
+              <img src="estilos/portfolio/viagemproj.png" alt="portfolio-image" class="img-fluid rounded w-100">
+              <div class="hover-overlay">
+                <div class="hover-content">
+                  <a class="btn btn-light btn-sm" target="_blank" href="estilos/portfolio/projetos/Exercícios - Viagem/index.html">View project</a>
+                </div>
+              </div>
+              <figcaption>"Modelo de site para agência de viagens"</figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+<!-- /portfolio -->
 
-    <!-- JavaScript -->
-    <script src="javascript/script.js"></script>
-   
+<section id="contact">
+    <div class="container">
+      <div>
+        <h3>Informações de Contato</h3>
+        <br>
+        <p>Telefone: (11) 98808-3722</p>
+        <p>Email: laraglinai.maga27@gmail.com</p>
+        <p>Endereço: São Paulo - Brasil</p>
+      </div>
+    </div>
+</section>
+  
 	</div>
+
+  <footer class="footer bg-dark text-white text-center">
+    <div class="container">
+      <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+  <script src="javascript/script.js"></script>
+  <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </div>
 </body>
 
 </html>

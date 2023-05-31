@@ -1,0 +1,110 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px;
+}
+
+.logo{
+    width: 100px;
+}
+
+header *{
+    display: inline;
+}
+
+header{
+    box-shadow:0 0 8px gray;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top:0%;
+    margin: 0px;
+}
+
+span{
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    position: absolute;
+    right: 50px;
+    bottom: 12px;
+    width: 400px; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#banner{
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    margin-top: 80px;
+}
+
+#banner div {
+    text-align: center;
+    padding-top: 320px;
+    color: white;
+}
+
+#banner div p {
+    font-size: 30px;
+}
+
+#banner div h1 {
+    font-size: 50px;
+}
+
+#banner div button{
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 20px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.destinos{
+    width: 100%;
+}
+
+#cards div{
+    width: 350px;
+    height: 200px;
+    padding: 30px;
+    margin: 1%;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 80px;
+}
+
+#cards div button {
+    position: relative;
+    bottom: 30%;
+    left: 40%;
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+    background-color: blueviolet;
+    color: white;
+}
+
+footer{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
