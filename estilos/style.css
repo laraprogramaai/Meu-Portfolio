@@ -29,7 +29,7 @@ body{
     min-height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgb(104, 38, 154), rgb(208, 0, 255));
+    background-image: linear-gradient(rgb(133, 40, 227), rgb(222, 77, 255));
       }
 
 .titulo-header {
@@ -112,7 +112,7 @@ body{
   }
   
   .titulo h1 {
-    font-size: 40px;
+    font-size: 50px;
     color: #ffffff;
   }
   
@@ -122,13 +122,20 @@ body{
   
   .titulo img {
     margin-top: 30px;
-    border-radius: 50%;
-    width: 300px;
+    width: 400px;
     height: auto;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
   }
 
 /* Estilo da seção "Sobre Mim" */
+
+.container {
+    margin-left: auto;
+    margin-right:auto;
+    align-items: center;
+  }
+
 #about {
    padding: 40px 0;
    background-color: #ffffff;
@@ -140,14 +147,15 @@ body{
 
 
 #about h2 {
-    font-size: 40px;
+    
     color: #181818;
     margin-bottom: 20px;
+    align-items: left;
     
 }
 
 #about p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 10px;
     margin-bottom: 40px;
@@ -157,7 +165,51 @@ body{
 
 }
 
+.icon {
+    font-size: 50px; /* Tamanho dos ícones */
+    color: #9105bc; /* Cor dos ícones */
+    position: relative;
+  }
+  
+  .icon::after {
+    content: attr(data-tooltip); /* Texto do balão */
+    position: absolute;
+    bottom: -25px; /* Distância do balão em relação ao ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #181818;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-family:'Poppins', sans-serif ;
+    font-size: 14px;
+  }
+  
+  .icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
 /*Estilo da seção "formação" */
+
+.titulo-edu{
+    font-size: 40px;
+    margin-left: 580px;
+}
+
+.border-square {
+    border: 2px solid #ffb3fc;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    flex-direction: column;
+    
+  }
 
 .section-title {
     margin-bottom: 30px;
@@ -165,17 +217,6 @@ body{
     font-size: 40px;
   }
   
-  .icon {
-    font-size: 50px;
-    color: #fff;
-    border-radius: 50%;
-  }
-  
-  .icon-bg {
-    background-color: #fff;
-    padding: 50px;
-
-  }
   
   .text-dark {
     color: #ffffff;
@@ -192,61 +233,53 @@ body{
   }
   
   .mb-80 {
-    margin-bottom: 80px;
-  }
-  
-  .position-relative {
-    position: relative;
-  }
-  
-  .rounded-circle {
-    border-radius: 50%;
+    margin-bottom: 60px;
   }
   
   .section {
     padding: 80px 0;
     color: #fff;
   }
-
+  
   .bx-medal {
     font-size: 40px;
     color: #fff;
-  }
-
-
-/* Estilo da seção "Habilidades" */
-#skills {
-    padding: 40px 0;
-    background-color: #fff;
-    
-}
-
-#skills h4{
-    font-size: 28px;
-    color: #181818;
-    margin-bottom: 20px;
-}
-
-#skills h2{
-    color: #181818;
-    font-size: 40px;
-}
-
-/* Estilos para o gráfico rosquinha */
-.progress-wrapper {
-    width: 100px;
-    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 50px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    justify-content: 10px;
+    transition: transform 0.3s ease;
   }
   
-  canvas {
-    width: 100% !important;
-    height: 100% !important;
+  .bx-medal:hover {
+    transform: rotateY(180deg);
   }
+
+  .bx-star {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 50px; /* Ajuste o valor conforme necessário */
+    display: flex;
+    justify-content: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .bx-star:hover {
+    transform: rotateY(180deg);
+  }
+  
 /* Estilo da seção "Projetos" */
 
+.projects {
+    margin-top: 100px;
+    background-color: #ffffff;
+  }
+
+
 .carousel-item img {
-    width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
+    width: 50px;
+    height: 500px; /* Ajuste a altura conforme necessário */
     object-fit: cover; /* Para ajustar o dimensionamento das imagens */
   }  
 
@@ -254,7 +287,7 @@ body{
     color: #181818;
     font-size: 40px;
     align-items: center;
-    margin-top: auto;
+    margin-top: 60px;
     padding: auto;
 
 }
