@@ -1,3 +1,4 @@
+
 // Web Design Chart
 //Habilidades grafico
 var webDesignChart = new Chart(document.getElementById('web-design-chart'), {
