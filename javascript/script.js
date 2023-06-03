@@ -104,4 +104,20 @@ var webDesignChart = new Chart(document.getElementById('web-design-chart'), {
   
     // Initialize Carousel
     $('.carousel').carousel();
+
+    
+   
+// Seleciona o elemento da mensagem de confirmação
+var confirmationMessage = document.getElementById("confirmationMessage");
+
+// Cria um elemento de ícone
+var icon = document.createElement("i");
+icon.classList.add("bx", "bxs-check-circle");
+
+// Adiciona o ícone ao elemento de mensagem de confirmação
+confirmationMessage.appendChild(icon);
+
+
+
+
   

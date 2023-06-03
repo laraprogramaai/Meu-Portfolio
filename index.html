@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    
+
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="estilos/style.css">
@@ -44,10 +44,10 @@
         </div>
         
         <ul class="navlist">
-            <li><a href="#">Sobre mim</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#habilidades">Educação</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
         
     </header>
@@ -55,22 +55,86 @@
     <section class="titulo">
       <div class="container">
         <div class="row">
-          <div class="col-lg-11 mx-auto">
-            <h4>Olá, Mundo!</h4>
-            <h1>Eu sou Lara Magalhães</h1>
-            <h4>Desenvolvedora Web Front-end.</h4>
+          <div class="col-lg-20 mx-100">
+            <h4><span id="line1"></span></h4>
+            <h1><span id="line2"></span></h1>
+            <h4><span id="line3"></span></h4>
           </div>
         </div>
       </div>
+      <!-- foto de perfil -->
       <div class="container text-center">
+        <div class="status-container">
+          
+          
         <img src="estilos/imagens/foto-lara2.jpeg" class="rounded-circle img-fluid">
       </div>
+      <div class="js-user-status-container user-status-circle-badge d-inline-block lh-condensed-ultra p-2" data-team-hovercards-enabled="">
+        <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
+          <summary class="btn-link btn-block Link--secondary no-underline js-toggle-user-status-edit toggle-user-status-edit" data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:61236053,&quot;target&quot;:&quot;EDIT_USER_STATUS&quot;,&quot;user_id&quot;:61236053,&quot;originating_url&quot;:&quot;https://github.com/laraprogramaai&quot;}}" data-hydro-click-hmac="e873a60dd5e9e6630bcee944f314229c266541baf62ecc6d86b509b408ea5c4d" role="button">
+            <div class="d-flex flex-items-center flex-items-stretch">
+              <div class="f6 lh-condensed user-status-header d-inline-flex user-status-emoji-only-header circle">
+                <div class="user-status-emoji-container flex-shrink-0 mr-2 d-flex flex-items-center flex-justify-center ">
+                  <div><g-emoji class="g-emoji" alias="woman_technologist" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f4bb.png">👩‍💻</g-emoji></div>
+                </div>
+              </div>
+              <div class="
+                 ws-normal
+                 user-status-message-wrapper f6 min-width-0">
+                <div class="css-truncate css-truncate-target width-fit color-fg-default">
+                    <span class="color-fg-muted">Programando...</span>
+                </div>
+              </div>
+            </div>
+          </summary>
+          <details-dialog class="rounded-2 anim-fade-in fast Box Box--overlay overflow-visible" role="dialog" aria-label="Edit status" tabindex="-1" aria-modal="true">
+            <!-- Restante do código... -->
+          </details-dialog>
+        </details>
       </div>
     </section>
 
+    <!-- Animação -->
+    <script>
+      // Array com as linhas de texto
+      var lines = [
+        "Olá, Mundo!",
+        "Eu sou Lara Magalhães Tagliani...",
+        "Desenvolvedora Web Front-end."
+      ];
+    
+      // Elementos onde o texto será exibido
+      var line1 = document.getElementById("line1");
+      var line2 = document.getElementById("line2");
+      var line3 = document.getElementById("line3");
+    
+      // Função para simular o efeito de digitação
+      function typeEffect(element, text, delay) {
+        var i = 0;
+        var interval = setInterval(function() {
+          element.innerHTML += text.charAt(i);
+          i++;
+          if (i >= text.length) {
+            clearInterval(interval);
+          }
+        }, delay);
+      }
+    
+      // Chama a função para cada linha de texto
+      typeEffect(line1, lines[0], 100);
+      setTimeout(function() {
+        typeEffect(line2, lines[1], 100);
+      }, lines[0].length * 100); // Aguarda o término da primeira linha
+      setTimeout(function() {
+        typeEffect(line3, lines[2], 100);
+      }, (lines[0].length + lines[1].length) * 100); // Aguarda o término da segunda linha
+    </script>
+
+
+    <!-- Seção Sobre mim -->
     <section id="about">
       <div class="container">
-      <h1>Sobre Mim</h1>
+      <h1 id="sobre">Sobre Mim</h1>
       <p class="font-secondary paragraph-lg text-dark">Olá! Meu nome é <b>Lara Magalhães Tagliani.</b></p>
       <p class="font-secondary paragraph-lg text-dark"> Tenho 24 anos e sou desenvolvedora <b>Front-end</b> com experiência em <b>Visual Studio</b>, <b>WordPress</b>, <b>Figma</b> e <b>GitHub</b>. Certificada em <b>Web design</b> e programação básica, com habilidades em <ins>HTML5</ins>, <ins>CSS3</ins>, <ins>JavaScript</ins>. Habilidades em design gráfico com Photoshop e Illustrator, modelagem 3D com Blender e desenho digital. Formada em Tecnologia em Jogos Digitais pela Uninove. Busco oportunidades para aplicar meus conhecimentos e me destacar na área de desenvolvimento web.</p>
       <h2>Algumas ferramentas que eu uso:</h2>
@@ -88,7 +152,7 @@
 
 
 <!-- educação -->
-<h1 class="titulo-edu">Educação</h1>
+<h1 class="titulo-edu" id="habilidades">Educação</h1>
 <section class="section position-relative">
   <div class="container">
   <div class="row">
@@ -101,7 +165,7 @@
           <i class='bx bx-medal'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2022</p>
+          <p class="text-light mb-1">2022</p>
           <h4>Tecnologia em Jogos Digitais</h4>
           <p class="mb-0 text-light">Universidade Nove de Julho - Campus Memorial</p>
         </div>
@@ -113,7 +177,7 @@
           <i class='bx bx-medal'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2018</p>
+          <p class="text-light mb-1">2018</p>
           <h4>Web Designer</h4>
           <p class="mb-0 text-light">Senac Lapa Tito</p>
         </div>
@@ -128,7 +192,7 @@
           <i class='bx bx-star'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2023</p>
+          <p class="text-light mb-1">2023</p>
           <h4>WordPress</h4>
           <p class="mb-0 text-light">Curso em Vídeo</p>
         </div>
@@ -140,7 +204,7 @@
           <i class='bx bx-star'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2023</p>
+          <p class="text-light mb-1">2023</p>
           <h4>Git e GitHub</h4>
           <p class="mb-0 text-light">Curso em video</p>
         </div>
@@ -152,7 +216,7 @@
           <i class='bx bx-star'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2019</p>
+          <p class="text-light mb-1">2019</p>
           <h4>Desenvolvimento de aplicativos com Android Studio</h4>
           <p class="mb-0 text-light">Mad Code</p>
         </div>
@@ -164,7 +228,7 @@
           <i class='bx bx-star'></i>
         </div>
         <div>
-          <p class="text-dark mb-1">2018</p>
+          <p class="text-light mb-1">2018</p>
           <h4>Programação Módulo - Básico</h4>
           <p class="mb-0 text-light">Master Tech</p>
         </div>
@@ -183,7 +247,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="project-title">Portfólio<br><h2>
+        <h2 class="project-title" id="projetos">Projetos</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -201,7 +265,7 @@
 
                 <div class="image-overlay">
                   
-                  <h3>Site feito no curso em vídeo</h3>
+                  <h3>Site desenvolvido no curso em vídeo</h3>
                   <p>Descrição do projeto</p>
                 </div>
 
@@ -215,8 +279,8 @@
               <div class="carousel-caption">
 
                 <div class="image-overlay">
-                  <h3>Site feito no curso em vídeo</h3>
-                  <p>Descrição do projeto</p>
+                  <h3>Site Super Mario Bros.</h3>
+                  <p>Site desenvolvido para promover o filme</p>
                 </div>
                 
                 <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/Site-Mario-Bros/index.html">View project</a>
@@ -229,8 +293,8 @@
               <div class="carousel-caption">
 
                 <div class="image-overlay">
-                  <h3>Site Super Mario Bros.</h3>
-                  <p>Descrição do projeto</p>
+                  <h3>Site PetSHow</h3>
+                  <p>Modelo de site para PetShop</p>
                 </div>
                 
                 <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/petshow/index.html">View project</a>
@@ -243,8 +307,8 @@
               <div class="carousel-caption">
 
                 <div class="image-overlay">
-                  <h3>Site feito no curso em vídeo</h3>
-                  <p>Descrição do projeto</p>
+                  <h3>Site Agência de Viagem</h3>
+                  <p>Modelo de site de viagens</p>
                 </div>
                 
                 <a class="btn btn-light btn-sm custom-btn pulsating-btn" target="_blank" href="estilos/portfolio/projetos/Exercícios - Viagem/index.html">View project</a>
@@ -266,21 +330,58 @@
   </div>
 </section>
 
+
+
     <!-- carrocel -->
 <!-- /portfolio -->
 
+<!-- sessão Contato -->
+
 <section id="contact">
-    <div class="container">
-      <div>
-        <h3>Informações de Contato</h3>
-        <br>
-        <p>Telefone: (11) 98808-3722</p>
-        <p>Email: laraglinai.maga27@gmail.com</p>
-        <p>Endereço: São Paulo - Brasil</p>
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-details">
+        <div class="contact-info">
+          <h2 id="contato">Contato:</h2>
+          <p>Telefone: (11) 98808-3722</p>
+          <p>Email: laraglinai.maga27@gmail.com</p>
+          <p>Endereço: São Paulo - Brasil</p>
+        </div>
+        <div class="social-media">
+          <h3>Redes Sociais</h3>
+          <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/in/lara-magalh%C3%A3es-tagliani-230768178/" target="_blank"><i class='bx bxl-linkedin' ></i></a></li>
+            <li><a href="https://www.instagram.com/laramagalhaestagii/" target="_blank"><i class='bx bxl-instagram' ></i></a></li>
+            <li><a href="https://github.com/laraprogramaai" target="_blank"><i class='bx bxl-github' ></i></a></li>
+            <!-- Adicione outras redes sociais aqui -->
+          </ul>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Formulário para Contato</h3>
+        <form id="contactForm" action="https://formspree.io/f/mrgvweyp"
+        method="POST">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" id="submitButton" class="custom-btn">Enviar</button>
+        </form>
+        <div id="confirmationMessage">Enviado!</div>
       </div>
     </div>
+  </div>
 </section>
-  
+
+
 	
 
   <footer class="footer bg-dark text-white text-center">
@@ -290,8 +391,31 @@
   
   </footer>
 
+  <!-- Formulario "Enviar" para "Enviado" -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio do formulário
   
+      // Exibe a mensagem de "Enviado!"
+      var confirmationMessage = document.getElementById("confirmationMessage");
+      confirmationMessage.style.display = "block";
   
+      // Cria um elemento de ícone
+      var icon = document.createElement("i");
+      icon.classList.add("bx", "bxs-check-circle");
+  
+      // Adiciona o ícone ao elemento de mensagem de confirmação
+      confirmationMessage.appendChild(icon);
+  
+      // Limpa os campos do formulário
+      document.getElementById("name").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("message").value = "";
+    });
+  </script>
+
+  
+  <!-- Bootstrap e javascript link -->
   <script src="main.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.1/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
