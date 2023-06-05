@@ -1,10 +1,35 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px){}
+/* Exemplo de media query para telas pequenas */
+@media screen and (max-width: 768px) {
+  /* Estilos para telas pequenas */
+  .navlist {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navlist li {
+    margin: 0 10px;
+  }
+
+}
+
+/* Exemplo de media query para telas médias */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para telas médias */
+}
+
+/* Exemplo de media query para telas grandes */
+@media screen and (min-width: 1024px) {
+  /* Estilos para telas grandes */
+}
+
+
+/* header */
 
     .titulo-header{
         font-size: 18px;
@@ -19,7 +44,7 @@ header {
     padding: 20px;
     background: transparent;
     align-items: center;
-    width: 98%;
+    width: auto;
 }
 
 body{
@@ -30,8 +55,10 @@ body{
   
     /* background */
     background-image: url("imagens/backgroundbubbles-better.jpg");
-    background-size: contain;
+    background-size: 100%;
     background-position: center;
+    max-width: 100%; /* Imagens responsivas */
+    height: auto;
       }
 
 .titulo-header {
@@ -46,6 +73,8 @@ body{
     margin-left: auto;
     margin-top: 20px;
     list-style:none;
+    margin-bottom: auto;
+    
 }
 
 .navlist a {
@@ -94,14 +123,13 @@ body{
 .titulo {
     color: white;
     position: relative;
-    max-width: auto;
-    height: 440px;
+    max-width: 100%;
+    height: 100%;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(3, 3, 3, 0.5);
     display: flex;
-    justify-content: center;
     align-items: center;
     
     
@@ -109,7 +137,7 @@ body{
 
 .titulo-text {
     text-align: left;
-    align-items: end;
+    align-items: center;
      
 }
   .titulo h4 {
@@ -135,8 +163,41 @@ body{
     height: auto;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     border-radius: 0px;
+    
   }
 
+  
+  /* icones abaixo da imagem */
+  .social-icons-top {
+    position: inherit;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+  }
+  
+  .social-icons-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(255, 251, 251, 0.5);
+    border-radius: 50%;
+    background-color: #101010;
+  }
+  
+  .social-icons-top a i {
+    font-size: 25px;
+    color: #ffffff;
+  
+  }
 
 
 /* Estilo da seção "Sobre Mim" */
@@ -154,6 +215,7 @@ body{
    margin-bottom: 40px;
    max-width: auto;
    position: relative;
+   margin-top: 0px;
 }
 
 
@@ -228,6 +290,7 @@ body{
     margin-bottom: 30px;
     color: #ffffff;
     font-size: 40px;
+    text-align: center;
   }
   
   
@@ -272,10 +335,11 @@ body{
     font-size: 40px;
     color: #fff;
     margin-bottom: 10px;
-    margin-left: 50px; /* Ajuste o valor conforme necessário */
+    margin-left: 50px; 
     display: flex;
     justify-content: 10px;
     animation: flip 2s linear infinite; /* Ajuste a duração conforme necessário */
+    align-items: center;
   }
   
 
@@ -287,6 +351,7 @@ body{
     display: flex;
     justify-content: 10px;
     animation: flip 2s linear infinite;
+    align-items: center;
   }
 
   
@@ -494,7 +559,9 @@ body{
   color: #fff;
   background-color: #333;
   border-radius: 50%;
-  font-size: 25px;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(255, 251, 251, 0.5);
+  
 }
 
 .social-media h3 {
@@ -532,7 +599,7 @@ body{
 .contact-form textarea {
   width: 100%;
   padding: 0px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 5px;
 }
 
